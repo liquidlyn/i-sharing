@@ -32,6 +32,7 @@ for i in range(11):
     driver.find_element(By.CSS_SELECTOR, "#box-step-3 .message").send_keys("content**")
 
     driver.find_element(By.CSS_SELECTOR, ".input-file").send_keys(os.getcwd()+"\\cat-18.jpg")
+    time.sleep(1)
     driver.find_element(By.LINK_TEXT, "下一步").click()
     time.sleep(1)
     driver.find_element(By.LINK_TEXT, "下一步").click()
