@@ -39,18 +39,18 @@ for i in range(11):
     time.sleep(1)
     driver.find_element(By.CLASS_NAME, "btn.btn-cta.kerning-2.pink.skip").click()
     
-    time.sleep(3)
-    driver.find_element(By.CLASS_NAME, "btn.btn-event.kerning-2.books-card-complete").click()
+    time.sleep(2)
+    driver.find_element(By.LINK_TEXT, "完成賀卡").click()
     time.sleep(1)
     
     window_before = driver.window_handles[0]
     driver.find_element(By.CSS_SELECTOR, ".btn-share-line").click()
     time.sleep(3)
     window_after = driver.window_handles[1]
-    driver.switch_to_window(window_after)
+    driver.switch_to.window(window_after)
     driver.close()
-    driver.switch_to_window(window_before)
+    driver.switch_to.window(window_before)
     driver.find_element(By.LINK_TEXT, "關閉").click()
     driver.find_element(By.LINK_TEXT, "再寄一張賀卡").click()
 
-input('Please insert any key to exit.')   
+input('Finished sucessfully.')   
