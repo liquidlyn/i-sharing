@@ -14,8 +14,9 @@ driver.find_element_by_class_name('books-fb-name').click()
 driver.find_element_by_id('email').send_keys(loginid)
 driver.find_element_by_id('pass').send_keys(loginpwd)
 driver.find_element_by_id('loginbutton').click()
-
 time.sleep(2)
+driver.find_element(By.LINK_TEXT, "關閉").click()
+
 for i in range(11):
     driver.find_element(By.ID, "btn-create-card").click()
     time.sleep(1)
