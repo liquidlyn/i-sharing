@@ -61,7 +61,13 @@ for i in range(10):
     driver.switch_to.window(window_after)
     driver.close()
     driver.switch_to.window(window_before)
-    driver.find_element(By.CLASS_NAME, "books-popup-close").click()
+    while True:
+        try:        
+            driver.find_element(By.CLASS_NAME, "books-popup-close").click()
+            time.sleep(1)
+        except:
+            continue
+        break
     while True:
         try:        
             driver.find_element(By.LINK_TEXT, "再寄一張賀卡").click()
