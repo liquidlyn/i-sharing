@@ -34,7 +34,7 @@ def cards():
     window_before = driver.window_handles[0]
 
     for i in range(10):
-        while True:
+        for j in range(2):
             try:        
                 driver.find_element(By.CLASS_NAME, 'pop__close.text-hide.books-popup-close').click()
             except:
@@ -88,7 +88,7 @@ def cards():
                 print('No.'+str(i+1)+' card is completed, there are '+str(9-i)+' unfinished cards.')
         if i==8:
             print('No.'+str(i+1)+' card is completed, there is 1 unfinished card.')
-    while True:
+    for j in range(2):
             try:        
                 driver.find_element(By.CLASS_NAME, 'pop__close.text-hide.books-popup-close').click()
             except:
